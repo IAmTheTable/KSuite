@@ -43,8 +43,10 @@ export async function validateDiscordToken(token) {
 const config = {
     CLIENT_ID: process.env.DISCORD_CLIENT_ID || '1040433595904446495',
     CLIENT_SECRET: process.env.DISCORD_CLIENT_SECRET || 't-cI1NZ_Bb2HXDETCJb81sRhkjAS17Ny',
-    REDIRECT_URI: process.env.DISCORD_REDIRECT_URI || 'http://localhost:5173/api/auth'
+    REDIRECT_URI: process.env.DISCORD_REDIRECT_URI || 'http://tickets.krnlchan.lol:8080/api/auth'
 };
+
+export { config };
 
 /**
  * Exchange the authorization code for an access token

@@ -39,7 +39,7 @@
         </div>
         <div class="flex items-center gap-4">
             {#if user.avatar}
-                <img src={user.avatar} alt={user.username} class="w-10 h-10 rounded-full"/>
+                <img src="https://cdn.discordapp.com/avatars/{user.id}/{user.avatar}.png" class="w-10 h-10 rounded-full"/>
             {/if}
             <span class="text-purple-400">{user.username}</span>
             <form method="POST" action="/api/auth/logout">
@@ -107,7 +107,7 @@
                                     <td class="py-4">
                                         <div class="flex items-center gap-3">
                                             {#if u.avatar}
-                                                <img src={u.avatar} alt={u.username} class="w-8 h-8 rounded-full"/>
+                                                <img src="https://cdn.discordapp.com/avatars/{u.id}/{u.avatar}.png" alt={u.username} class="w-8 h-8 rounded-full"/>
                                             {/if}
                                             <span>{u.username}</span>
                                         </div>

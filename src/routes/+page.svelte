@@ -1,6 +1,7 @@
 <!-- src/routes/+page.svelte -->
 <script>
 	let isHovering = false;
+	import { getOAuthURL } from '$lib/discord/util.js';
 </script>
 
 <svelte:head>
@@ -53,7 +54,7 @@
 					on:mouseleave={() => isHovering = false}
 					on:click={() => {
 						// Frontend only - would normally redirect to Discord OAuth
-                        window.open('https://discord.com/oauth2/authorize?client_id=1040433595904446495&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fapi%2Fauth&scope=identify+guilds+email', '_blank');
+                        window.open(getOAuthURL(), '_blank');
 					}}
 				>
 					<div class="flex items-center justify-center space-x-3">

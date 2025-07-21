@@ -22,7 +22,6 @@ export async function load({ locals }) {
             // Try with current token
             const discordInfo = await getUserInfo(u.accessToken);
             return {
-                id: u.id,
                 ...discordInfo,
                 permissions: u.permissions,
                 isStaff: !!(u.permissions & 2),
